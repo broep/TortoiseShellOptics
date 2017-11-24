@@ -27,6 +27,7 @@ header {
 }
 
 .logo {
+  display: flex;
   padding-left: 2rem;
   justify-content: center;
   align-items: center;
@@ -50,17 +51,36 @@ li {
   margin: 1rem 2rem;
 }
 
-.main-banner-text {
+.flex {
+  display: flex;
+}
+
+header .flex {
+    justify-content: flex-end;
+}
+
+.main-banner {
+  background-color: white;
+  display: inline-block;
   margin-top: 10rem;
+  line-height: 2.4rem;
+  margin-right: -2rem;
+  padding: 0.75rem 5rem;
+}
+/*
+.main-banner-text {
+
+
   display: inline-block;
   background-color: white;
   padding: 1.5rem 5rem;
   right: 2rem;
-  position: relative;
-}
 
-.main-banner-text h1 {
+} */
+
+.main-banner h1 {
   font-size: 2rem;
+  margin: 0.67em 0;
   font-weight: bold;
   line-height: 1.2;
 }
@@ -68,20 +88,26 @@ li {
 
 
 .services {
-  margin-top: 3rem;
-  height: 8rem;
+
   display: flex;
   justify-content: center;
 
 }
 
 .service {
-
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+text-align: center;
+margin: 3rem;
+width: 5rem;
+height: 8rem;
 background-size: cover;
 }
 
-.service-image img{
-  max-width: 3rem;
+.service-image img {
+  width: 3.5rem;
 
 }
 
@@ -95,25 +121,21 @@ background-size: cover;
 .info {
   display: inline-block;
   width: 35%;
-  margin-right: 5rem;
+  margin-right: 5%;
 }
 
-.info span {
-
+.info p {
+  padding: 1rem 0;
 }
 
 .title {
-  display: inline-block;
-  width: 10rem;
+  display: block;
+  max-width: 10rem;
   color: white;
   background-color: cadetblue;
   font-weight: bold;
   font-size: 1rem;
-  text-transform: capitalize;
-  padding-left: 1.25rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
+  padding: 0.5rem 1.25rem;
 }
 
 
@@ -121,8 +143,9 @@ footer {
   margin-top: 5rem;
   background-color: azure;
 }
+
 footer .logo {
-  border: solid 1px black;
+
   display: flex;
   justify-content: flex-start;
   padding: 4rem;
@@ -130,4 +153,21 @@ footer .logo {
 
 footer .logo img {
    height: 1.5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  header {
+    padding-top: 0;
+    height: 22rem;
+  }
+
+  .main-banner {
+    line-height: normal;
+    margin-top: 5rem;
+    line-height: 2.4rem;
+    font-size: 1.33rem;
+    margin-right: 2rem;
+    padding: 0 4rem;
+  }
+
 }
