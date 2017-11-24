@@ -34,6 +34,11 @@ header {
 
 
 }
+
+.menu {
+  display: none;
+}
+
 .logo span {
   text-align: center;
   justify-content: center;
@@ -164,10 +169,73 @@ footer .logo img {
   .main-banner {
     line-height: normal;
     margin-top: 5rem;
-    line-height: 2.4rem;
     font-size: 1.33rem;
     margin-right: 2rem;
     padding: 0 4rem;
   }
 
+}
+
+@media only screen and (max-width: 480px) {
+  .menu {
+    display: flex;
+  }
+  .nav-items {
+    display: none;
+  }
+  header {
+    padding-top: 0;
+    height: 17rem;
+  }
+
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    margin: 1.54rem;
+  }
+
+  .container {
+    width: 480px;
+  }
+
+  header .flex {
+    justify-content: center;
+  }
+
+  .main-banner {
+    width: 100%;
+    line-height: 1rem;
+    margin-top: 9rem;
+    margin-right: 0;
+
+
+    padding: 0;
+  }
+    .main-banner h1 {
+      font-size: 1rem;
+      text-align: center;
+    }
+
+
+      .information {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .info {
+        width: 100%;
+      }
+
+      .title {
+        max-width: none;
+        text-align: center;
+      }
+
+      .info p {
+        padding: 1rem 0 4rem 0;
+        font-size: 0.77rem;
+      }
 }
